@@ -4,7 +4,12 @@
 \alias{bayesian_logistic_regression}
 \title{Bayesian Logistic Regression for UX Predictions}
 \usage{
-bayesian_logistic_regression(data, formula, n_samples = 10000)
+bayesian_logistic_regression(
+  data,
+  formula,
+  n_samples = 10000,
+  priors = normal(0, 1)
+)
 }
 \arguments{
 \item{data}{A data frame containing UX variables.}
@@ -12,17 +17,22 @@ bayesian_logistic_regression(data, formula, n_samples = 10000)
 \item{formula}{A formula specifying the logistic regression model (e.g., \code{task_success ~ experience + age}).}
 
 \item{n_samples}{The number of samples to draw from the posterior distribution (default is 10000).}
+
+\item{priors}{A list of priors for coefficients (default is weakly informative).}
 }
 \value{
-A posterior distribution of coefficients and predicted probabilities.
+A list containing model summary, posterior distributions, credible intervals, and predicted probabilities.
 }
 \description{
 Performs Bayesian logistic regression to estimate the probability of a binary UX outcome.
+Provides posterior distributions, credible intervals, and predicted probabilities.
 }
 \examples{
 library(rstanarm)
-test_data <- data.frame(task_success = c(1, 0, 1, 1, 0),
-                        experience = c(1, 2, 3, 4, 5),
-                        age = c(22, 30, 25, 40, 35))
+test_data <- data.frame(
+  task_success = c(1, 0, 1, 1, 0),
+  experience = c(1, 2, 3, 4, 5),
+  age = c(22, 30, 25, 40, 35)
+)
 bayesian_logistic_regression(test_data, task_success ~ experience + age)
 }

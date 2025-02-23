@@ -2,7 +2,7 @@
 % Please edit documentation in R/chi_square_test.R
 \name{chi_square_test}
 \alias{chi_square_test}
-\title{Chi-Square Test for Categorical Data}
+\title{Chi-Square Test for Categorical UX Data}
 \usage{
 chi_square_test(data, categorical_col1, categorical_col2)
 }
@@ -14,13 +14,16 @@ chi_square_test(data, categorical_col1, categorical_col2)
 \item{categorical_col2}{The second categorical column name.}
 }
 \value{
-A list with Chi-Square test results.
+A list containing Chi-Square test results, effect size (Cramér's V), observed vs. expected counts, and assumption checks.
 }
 \description{
-Performs a chi-square test to determine if there is a significant association between two categorical variables.
+Performs a chi-square test to determine if there is a significant association between two categorical UX variables.
+Provides observed and expected frequencies, effect size (Cramér's V), and test assumptions check.
 }
 \examples{
-test_data <- data.frame(UI_Version = rep(c("A", "B"), each = 50),
-                        Task_Success = sample(c("Success", "Fail"), 100, replace = TRUE))
+test_data <- data.frame(
+  UI_Version = rep(c("A", "B"), each = 50),
+  Task_Success = sample(c("Success", "Fail"), 100, replace = TRUE)
+)
 chi_square_test(test_data, "UI_Version", "Task_Success")
 }

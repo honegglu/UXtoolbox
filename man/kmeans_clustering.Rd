@@ -14,10 +14,11 @@ kmeans_clustering(data, centers = 3, n_start = 25)
 \item{n_start}{Number of random starts for K-means (default is 25).}
 }
 \value{
-A list containing cluster assignments and cluster centers.
+A list containing cluster assignments, cluster centers, and a visualization.
 }
 \description{
 Performs K-means clustering to group users based on behavioral or UX metrics.
+Provides a visualization of cluster assignments.
 }
 \examples{
 test_data <- data.frame(task_time = c(5, 10, 15, 20, 25),

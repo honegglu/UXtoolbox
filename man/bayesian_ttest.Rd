@@ -4,20 +4,24 @@
 \alias{bayesian_ttest}
 \title{Bayesian t-Test for UX Comparisons}
 \usage{
-bayesian_ttest(group1, group2, n_samples = 10000)
+bayesian_ttest(group1, group2, n_samples = 10000, ci = 0.95)
 }
 \arguments{
-\item{group1}{A numeric vector representing values from the first group.}
+\item{group1}{A numeric vector representing values from the first UX condition.}
 
-\item{group2}{A numeric vector representing values from the second group.}
+\item{group2}{A numeric vector representing values from the second UX condition.}
 
 \item{n_samples}{The number of samples to draw from the posterior distribution (default is 10000).}
+
+\item{ci}{The credible interval width (default is 0.95).}
 }
 \value{
-The probability that the mean of group1 is greater than group2.
+A list containing the probability that group1 has a greater mean, posterior distributions,
+credible intervals, and Bayesian effect size estimation.
 }
 \description{
-Performs a Bayesian t-test to estimate the probability that two groups have different means.
+Performs a Bayesian t-test to estimate the probability that two UX conditions have different means.
+Provides posterior distributions, credible intervals, and effect size estimation.
 }
 \examples{
 set.seed(42)

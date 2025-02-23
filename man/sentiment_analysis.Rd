@@ -12,10 +12,11 @@ sentiment_analysis(text_data, method = "bing")
 \item{method}{The sentiment scoring method (default is "bing").}
 }
 \value{
-A data frame containing sentiment scores for each text entry.
+A list containing sentiment scores and a sentiment distribution plot.
 }
 \description{
 Performs sentiment analysis on UX-related textual data using a pre-trained sentiment dictionary.
+Provides sentiment scores and a sentiment distribution plot.
 }
 \examples{
 library(tidytext)

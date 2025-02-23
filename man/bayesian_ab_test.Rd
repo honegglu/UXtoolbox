@@ -4,7 +4,7 @@
 \alias{bayesian_ab_test}
 \title{Bayesian A/B Test for UX Comparisons}
 \usage{
-bayesian_ab_test(successes, trials, n_samples = 10000)
+bayesian_ab_test(successes, trials, n_samples = 10000, ci = 0.95)
 }
 \arguments{
 \item{successes}{A vector with the number of successes in each group (A, B).}
@@ -12,12 +12,16 @@ bayesian_ab_test(successes, trials, n_samples = 10000)
 \item{trials}{A vector with the total trials in each group (A, B).}
 
 \item{n_samples}{The number of samples to draw from the posterior distribution (default is 10000).}
+
+\item{ci}{The credible interval width (default is 0.95).}
 }
 \value{
-The probability that condition A is better than condition B.
+A list containing the probability that condition A is better than condition B,
+the posterior distributions, and credible intervals.
 }
 \description{
 Performs a Bayesian A/B test to estimate the probability that one condition (A) is better than another (B).
+Provides credible intervals and effect size estimation.
 }
 \examples{
 bayesian_ab_test(successes = c(30, 20), trials = c(100, 100))

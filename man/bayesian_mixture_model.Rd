@@ -4,20 +4,23 @@
 \alias{bayesian_mixture_model}
 \title{Bayesian Mixture Model for UX Data Clustering}
 \usage{
-bayesian_mixture_model(data, n_components = 2, n_samples = 4000)
+bayesian_mixture_model(data, n_components = 2, n_samples = 10000, prior = NULL)
 }
 \arguments{
 \item{data}{A data frame containing UX variables to cluster.}
 
 \item{n_components}{The number of clusters to estimate (default is 2).}
 
-\item{n_samples}{Number of posterior samples (default is 4000).}
+\item{n_samples}{Number of posterior samples (default is 10000).}
+
+\item{prior}{A list of priors for Bayesian estimation (default is automatic).}
 }
 \value{
-A fitted Bayesian mixture model.
+A list containing the fitted Bayesian mixture model, cluster probabilities, posterior distributions, and BIC/AIC values.
 }
 \description{
 Performs Bayesian Gaussian Mixture Modeling (GMM) to identify clusters in UX data.
+Provides posterior distributions, cluster probabilities, and model selection criteria.
 }
 \examples{
 library(mclust)

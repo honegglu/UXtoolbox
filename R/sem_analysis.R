@@ -1,12 +1,13 @@
 #' Structural Equation Modeling (SEM) for UX Data
 #'
 #' Performs Structural Equation Modeling (SEM) to examine relationships between UX variables.
+#' Provides a summary of the model fit and a path diagram visualization.
 #'
 #' @param data A data frame containing UX variables.
 #' @param model_string A character string specifying the SEM model in lavaan syntax.
 #' @param estimator The estimation method (default is "MLR" for robust maximum likelihood).
 #'
-#' @return A summary of the fitted SEM model.
+#' @return A list containing the SEM model summary and a path diagram visualization.
 #' @export
 #'
 #' @examples
@@ -22,11 +23,25 @@
 #'   satisfaction ~ usability + engagement
 #' "
 #' sem_analysis(test_data, model)
+
 sem_analysis <- function(data, model_string, estimator = "MLR") {
   if (!requireNamespace("lavaan", quietly = TRUE)) install.packages("lavaan")
+  if (!requireNamespace("semPlot", quietly = TRUE)) install.packages("semPlot")
 
   library(lavaan)
+  library(semPlot)
 
+  # Fit SEM model
   model_fit <- sem(model_string, data = data, estimator = estimator)
-  return(summary(model_fit, fit.measures = TRUE, standardized = TRUE))
+  model_summary <- summary(model_fit, fit.measures = TRUE, standardized = TRUE)
+
+  # Create path diagram visualization
+  path_diagram <- semPaths(model_fit, what = "std", layout = "tree",
+                           edge.label.cex = 1.2, curvePivot = TRUE,
+                           title = "SEM Path Diagram")
+
+  return(list(
+    Model_Summary = model_summary,
+    Path_Diagram = path_diagram
+  ))
 }

@@ -4,20 +4,23 @@
 \alias{bayesian_anova}
 \title{Bayesian ANOVA for UX Group Comparisons}
 \usage{
-bayesian_anova(data, formula, n_samples = 4000)
+bayesian_anova(data, formula, n_samples = 10000, prior_scale = 0.5)
 }
 \arguments{
 \item{data}{A data frame containing UX variables.}
 
 \item{formula}{A formula specifying the model (e.g., \code{completion_time ~ UI_version}).}
 
-\item{n_samples}{Number of posterior samples (default is 4000).}
+\item{n_samples}{Number of posterior samples (default is 10000).}
+
+\item{prior_scale}{The scale of the Cauchy prior (default is 0.5).}
 }
 \value{
-A Bayesian ANOVA summary.
+A list containing the Bayesian ANOVA summary, posterior distributions, and credible intervals.
 }
 \description{
 Performs Bayesian ANOVA to compare three or more groups on a UX metric.
+Provides Bayes Factors, credible intervals, and posterior distributions.
 }
 \examples{
 library(BayesFactor)

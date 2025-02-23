@@ -4,20 +4,28 @@
 \alias{bayesian_survival_analysis}
 \title{Bayesian Survival Analysis for UX Retention Studies}
 \usage{
-bayesian_survival_analysis(data, formula, n_samples = 4000)
+bayesian_survival_analysis(
+  data,
+  formula,
+  n_samples = 10000,
+  priors = normal(0, 1)
+)
 }
 \arguments{
 \item{data}{A data frame containing UX retention variables.}
 
 \item{formula}{A formula specifying survival time and predictors (e.g., \code{Surv(time, event) ~ age + experience}).}
 
-\item{n_samples}{Number of posterior samples (default is 4000).}
+\item{n_samples}{Number of posterior samples (default is 10000).}
+
+\item{priors}{A list of priors for coefficients (default is weakly informative).}
 }
 \value{
-A Bayesian survival model summary.
+A list containing model summary, posterior distributions, hazard ratios, and credible intervals.
 }
 \description{
-Performs Bayesian survival analysis using a joint model to estimate retention rates over time.
+Performs Bayesian survival analysis to estimate retention rates and time-to-event probabilities in UX studies.
+Provides posterior distributions, hazard ratios, and credible intervals.
 }
 \examples{
 library(rstanarm)

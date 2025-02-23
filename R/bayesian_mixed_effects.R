@@ -17,6 +17,7 @@
 #'   user_id = factor(rep(1:5, each = 2))
 #' )
 #' bayesian_mixed_effects(test_data, completion_time ~ condition + (1 | user_id))
+
 bayesian_mixed_effects <- function(data, formula, n_samples = 4000) {
   if (!requireNamespace("rstanarm", quietly = TRUE)) install.packages("rstanarm")
   if (!requireNamespace("lme4", quietly = TRUE)) install.packages("lme4")
@@ -25,5 +26,6 @@ bayesian_mixed_effects <- function(data, formula, n_samples = 4000) {
   library(lme4)
 
   model <- stan_glmer(formula, data = data, family = gaussian(), iter = n_samples, refresh = 0)
+
   return(summary(model))
 }

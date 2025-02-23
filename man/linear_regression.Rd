@@ -12,10 +12,10 @@ linear_regression(data, formula)
 \item{formula}{A formula specifying the regression model (e.g., \code{task_time ~ experience}).}
 }
 \value{
-A summary of the regression model.
+A list containing the regression summary and diagnostic plots.
 }
 \description{
-Fits a linear regression model to predict UX outcomes.
+Fits a linear regression model to predict UX outcomes and provides diagnostic plots.
 }
 \examples{
 test_data <- data.frame(task_time = c(5, 10, 15, 20, 25),

@@ -2,7 +2,7 @@
 % Please edit documentation in R/anova_test.R
 \name{anova_test}
 \alias{anova_test}
-\title{One-Way ANOVA Test}
+\title{One-Way ANOVA for UX and HF Studies}
 \usage{
 anova_test(data, group_col, value_col)
 }
@@ -14,13 +14,16 @@ anova_test(data, group_col, value_col)
 \item{value_col}{The column name for the numeric values to compare.}
 }
 \value{
-An ANOVA model summary.
+A list containing ANOVA summary, effect size (η²), assumption checks, and post-hoc results.
 }
 \description{
-Performs a one-way ANOVA to compare three or more independent groups.
+Performs a one-way ANOVA to compare three or more independent UX/HF study conditions.
+Automatically checks assumptions and adjusts for violations.
 }
 \examples{
-test_data <- data.frame(Group = rep(c("A", "B", "C"), each = 5),
-                        Score = c(10, 20, 30, 40, 50, 12, 22, 32, 42, 52, 15, 25, 35, 45, 55))
+test_data <- data.frame(
+  Group = rep(c("A", "B", "C"), each = 5),
+  Score = c(10, 20, 30, 40, 50, 12, 22, 32, 42, 52, 15, 25, 35, 45, 55)
+)
 anova_test(test_data, "Group", "Score")
 }

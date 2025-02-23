@@ -16,10 +16,11 @@ time_series_analysis(data, time_col, value_col, frequency = 12)
 \item{frequency}{The expected frequency of the data (e.g., 12 for monthly data).}
 }
 \value{
-A decomposed time series object showing trend, seasonality, and residuals.
+A list containing the decomposed time series object and a visualization plot.
 }
 \description{
 Performs time series decomposition to detect trends and seasonality in UX data.
+Provides a decomposition plot for better visualization.
 }
 \examples{
 library(ggplot2)

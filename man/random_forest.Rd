@@ -14,15 +14,18 @@ random_forest(data, formula, n_trees = 100)
 \item{n_trees}{Number of trees in the random forest (default is 100).}
 }
 \value{
-A trained random forest model.
+A list containing the trained random forest model, feature importance, and an importance plot.
 }
 \description{
-Fits a random forest model to predict UX outcomes.
+Fits a random forest model to predict UX outcomes such as task success, engagement, or user behavior.
+Provides feature importance, model accuracy, and a visualization of variable importance.
 }
 \examples{
 library(randomForest)
-test_data <- data.frame(task_success = factor(c(1, 0, 1, 1, 0)),
-                        experience = c(1, 2, 3, 4, 5),
-                        age = c(22, 30, 25, 40, 35))
+test_data <- data.frame(
+  task_success = factor(c(1, 0, 1, 1, 0)),
+  experience = c(1, 2, 3, 4, 5),
+  age = c(22, 30, 25, 40, 35)
+)
 random_forest(test_data, task_success ~ experience + age, n_trees = 200)
 }

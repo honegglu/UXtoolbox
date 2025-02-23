@@ -17,7 +17,8 @@ content_analysis(file_path, sentiment_method = "bing", n_topics = 3)
 A list containing word frequencies, sentiment scores, and topic modeling results.
 }
 \description{
-Performs content analysis on a text file, including word frequency, sentiment analysis, and topic modeling.
+Performs content analysis on a UX-related text file, including word frequency, sentiment analysis, and topic modeling.
+Optimized for UX feedback, survey responses, and open-ended user comments.
 }
 \examples{
 # Assuming "feedback.txt" is a file in your working directory

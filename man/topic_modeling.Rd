@@ -14,10 +14,11 @@ topic_modeling(text_data, n_topics = 3, n_words = 5)
 \item{n_words}{The number of top words to return per topic (default is 5).}
 }
 \value{
-A list of topics with their top words.
+A list containing topic-term distributions and a visualization of top words per topic.
 }
 \description{
 Performs Latent Dirichlet Allocation (LDA) to uncover topics in UX-related textual data.
+Provides a word distribution plot for each topic.
 }
 \examples{
 library(topicmodels)

@@ -14,10 +14,11 @@ pca_analysis(data, scale = TRUE, n_components = NULL)
 \item{n_components}{The number of principal components to retain (default is NULL, keeps all).}
 }
 \value{
-A list containing PCA summary and component loadings.
+A list containing PCA summary, component loadings, scree plot, and biplot.
 }
 \description{
 Performs PCA to reduce dimensionality in UX datasets while retaining key variance.
+Provides a scree plot and biplot for visualization.
 }
 \examples{
 test_data <- data.frame(task_time = c(5, 10, 15, 20, 25),

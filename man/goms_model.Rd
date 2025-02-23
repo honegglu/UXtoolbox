@@ -21,10 +21,11 @@ goms_model(
 \item{system_response}{Time taken by the system to respond in seconds (default is 0).}
 }
 \value{
-Estimated total task execution time in seconds.
+A list containing estimated execution time and a breakdown of the task components.
 }
 \description{
-Estimates task execution time using the GOMS model.
+Estimates task execution time using the GOMS model, considering keystrokes, pointing actions, and cognitive operations.
+Provides a breakdown of task elements and an estimated total execution time.
 }
 \examples{
 goms_model(keystrokes = 5, pointing_actions = 3, mental_operations = 2, system_response = 1)

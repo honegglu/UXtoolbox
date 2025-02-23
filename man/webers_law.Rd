@@ -12,10 +12,11 @@ webers_law(stimulus, k = 0.1)
 \item{k}{The Weber fraction, a constant that varies by sense modality (default is 0.1).}
 }
 \value{
-A numeric vector of JND values.
+A list containing the computed JND values and a visualization.
 }
 \description{
 Computes the Just Noticeable Difference (JND) based on Weber’s Law.
+Provides a visualization of how JND changes with stimulus intensity.
 }
 \examples{
 stimulus <- c(10, 20, 50, 100)

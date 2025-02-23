@@ -2,7 +2,7 @@
 % Please edit documentation in R/mann_whitney_test.R
 \name{mann_whitney_test}
 \alias{mann_whitney_test}
-\title{Mann-Whitney U Test}
+\title{Mann-Whitney U Test (Wilcoxon Rank-Sum Test) for UX Comparisons}
 \usage{
 mann_whitney_test(data, group_col, value_col)
 }
@@ -14,10 +14,11 @@ mann_whitney_test(data, group_col, value_col)
 \item{value_col}{The column name for the numeric values to compare.}
 }
 \value{
-A list with Mann-Whitney test results.
+A list containing the Mann-Whitney U test results, effect size, and a boxplot visualization.
 }
 \description{
-Performs a Mann-Whitney U test (Wilcoxon Rank-Sum test) to compare two independent groups when data is not normally distributed.
+Performs a Mann-Whitney U test to compare two independent groups when data is not normally distributed.
+Provides a boxplot visualization of group differences.
 }
 \examples{
 test_data <- data.frame(Group = rep(c("A", "B"), each = 5),

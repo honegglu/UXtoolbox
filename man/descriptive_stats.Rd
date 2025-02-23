@@ -2,7 +2,7 @@
 % Please edit documentation in R/descriptive_stats.R
 \name{descriptive_stats}
 \alias{descriptive_stats}
-\title{Descriptive Statistics Summary}
+\title{Descriptive Statistics Summary for UX Metrics}
 \usage{
 descriptive_stats(data, cols)
 }
@@ -12,10 +12,10 @@ descriptive_stats(data, cols)
 \item{cols}{A vector of column names to summarize.}
 }
 \value{
-A data frame with descriptive statistics.
+A data frame with comprehensive descriptive statistics.
 }
 \description{
-Computes mean, median, standard deviation, min, and max for selected columns.
+Computes detailed descriptive statistics including mean, median, standard deviation, variance, IQR, min, max, and skewness for selected UX-related columns.
 }
 \examples{
 test_data <- data.frame(A = c(1, 2, 3, 4, 5), B = c(10, 20, 30, 40, 50))

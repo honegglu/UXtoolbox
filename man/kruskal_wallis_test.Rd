@@ -2,7 +2,7 @@
 % Please edit documentation in R/kruskal_wallis_test.R
 \name{kruskal_wallis_test}
 \alias{kruskal_wallis_test}
-\title{Kruskal-Wallis Test (Non-Parametric ANOVA)}
+\title{Kruskal-Wallis Test (Non-Parametric ANOVA) for UX Studies}
 \usage{
 kruskal_wallis_test(data, group_col, value_col)
 }
@@ -14,13 +14,16 @@ kruskal_wallis_test(data, group_col, value_col)
 \item{value_col}{The column name for the numeric values to compare.}
 }
 \value{
-A list with Kruskal-Wallis test results.
+A list containing the Kruskal-Wallis test results, effect size (eta-squared), and post-hoc pairwise comparisons.
 }
 \description{
 Performs a Kruskal-Wallis test to compare three or more independent groups when data is not normally distributed.
+Provides effect size (eta-squared) and pairwise post-hoc comparisons.
 }
 \examples{
-test_data <- data.frame(Group = rep(c("A", "B", "C"), each = 5),
-                        Score = c(10, 20, 30, 40, 50, 12, 22, 32, 42, 52, 15, 25, 35, 45, 55))
+test_data <- data.frame(
+  Group = rep(c("A", "B", "C"), each = 5),
+  Score = c(10, 20, 30, 40, 50, 12, 22, 32, 42, 52, 15, 25, 35, 45, 55)
+)
 kruskal_wallis_test(test_data, "Group", "Score")
 }

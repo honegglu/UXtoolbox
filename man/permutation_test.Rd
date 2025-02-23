@@ -2,7 +2,7 @@
 % Please edit documentation in R/permutation_test.R
 \name{permutation_test}
 \alias{permutation_test}
-\title{Permutation Test for Group Differences}
+\title{Permutation Test for Group Differences in UX Metrics}
 \usage{
 permutation_test(data, group_col, value_col, n_perms = 1000)
 }
@@ -16,10 +16,11 @@ permutation_test(data, group_col, value_col, n_perms = 1000)
 \item{n_perms}{The number of permutations to perform (default is 1000).}
 }
 \value{
-A list containing the observed difference, p-value, and permutation distribution.
+A list containing the observed difference, p-value, and a permutation distribution plot.
 }
 \description{
 Uses a permutation test to compare two independent groups without assuming normality.
+Provides a histogram of the permutation distribution.
 }
 \examples{
 test_data <- data.frame(Group = rep(c("A", "B"), each = 10),

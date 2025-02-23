@@ -2,7 +2,7 @@
 % Please edit documentation in R/cox_regression.R
 \name{cox_regression}
 \alias{cox_regression}
-\title{Cox Regression Model for Time-to-Completion Analysis}
+\title{Cox Regression Model for Time-to-Completion Analysis in UX Studies}
 \usage{
 cox_regression(data, time_col, event_col, predictors)
 }
@@ -16,16 +16,19 @@ cox_regression(data, time_col, event_col, predictors)
 \item{predictors}{A formula specifying predictor variables (e.g., \code{~ experience + device_type}).}
 }
 \value{
-A summary of the Cox regression model.
+A list containing model summary, hazard ratios, confidence intervals, and proportional hazards test.
 }
 \description{
-Fits a Cox proportional hazards model to analyze time-to-event UX data.
+Fits a Cox proportional hazards model to analyze time-to-event UX data, such as task completion time or user retention.
+Provides hazard ratios, confidence intervals, and model diagnostics.
 }
 \examples{
 library(survival)
-test_data <- data.frame(time = c(5, 10, 15, 20, 25),
-                        event = c(1, 1, 0, 1, 0),
-                        experience = c(1, 2, 3, 4, 5),
-                        device_type = factor(c("Mobile", "Desktop", "Mobile", "Desktop", "Mobile")))
+test_data <- data.frame(
+  time = c(5, 10, 15, 20, 25),
+  event = c(1, 1, 0, 1, 0),
+  experience = c(1, 2, 3, 4, 5),
+  device_type = factor(c("Mobile", "Desktop", "Mobile", "Desktop", "Mobile"))
+)
 cox_regression(test_data, "time", "event", ~ experience + device_type)
 }

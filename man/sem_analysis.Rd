@@ -14,10 +14,11 @@ sem_analysis(data, model_string, estimator = "MLR")
 \item{estimator}{The estimation method (default is "MLR" for robust maximum likelihood).}
 }
 \value{
-A summary of the fitted SEM model.
+A list containing the SEM model summary and a path diagram visualization.
 }
 \description{
 Performs Structural Equation Modeling (SEM) to examine relationships between UX variables.
+Provides a summary of the model fit and a path diagram visualization.
 }
 \examples{
 library(lavaan)

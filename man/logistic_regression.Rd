@@ -12,10 +12,10 @@ logistic_regression(data, formula)
 \item{formula}{A formula specifying the logistic regression model (e.g., \code{task_success ~ experience}).}
 }
 \value{
-A summary of the logistic regression model.
+A list containing the logistic regression summary and diagnostic plots.
 }
 \description{
-Fits a logistic regression model to predict binary UX outcomes.
+Fits a logistic regression model to predict binary UX outcomes and provides diagnostic plots.
 }
 \examples{
 test_data <- data.frame(task_success = c(1, 0, 1, 1, 0),

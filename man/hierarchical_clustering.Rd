@@ -4,7 +4,12 @@
 \alias{hierarchical_clustering}
 \title{Hierarchical Clustering for UX Segmentation}
 \usage{
-hierarchical_clustering(data, method = "euclidean", linkage = "complete")
+hierarchical_clustering(
+  data,
+  method = "euclidean",
+  linkage = "complete",
+  k = NULL
+)
 }
 \arguments{
 \item{data}{A data frame containing UX variables (numeric only).}
@@ -12,12 +17,15 @@ hierarchical_clustering(data, method = "euclidean", linkage = "complete")
 \item{method}{The distance metric for clustering (default is "euclidean").}
 
 \item{linkage}{The linkage method for clustering (default is "complete").}
+
+\item{k}{The number of clusters to cut the dendrogram into (default is NULL).}
 }
 \value{
-A hierarchical clustering object.
+A list containing cluster assignments and a dendrogram plot.
 }
 \description{
 Performs hierarchical clustering to group users based on behavioral or UX metrics.
+Provides a dendrogram visualization for cluster interpretation.
 }
 \examples{
 test_data <- data.frame(task_time = c(5, 10, 15, 20, 25),

@@ -2,7 +2,7 @@
 % Please edit documentation in R/paired_ttest.R
 \name{paired_ttest}
 \alias{paired_ttest}
-\title{Paired Samples t-Test}
+\title{Paired Samples t-Test for UX Comparisons}
 \usage{
 paired_ttest(data, pre_col, post_col)
 }
@@ -14,10 +14,11 @@ paired_ttest(data, pre_col, post_col)
 \item{post_col}{The column name for post-test values.}
 }
 \value{
-A list with t-test results.
+A list containing the paired t-test results, effect size, and a visualization.
 }
 \description{
-Compares two related samples (e.g., before and after a UX change) using a paired t-test.
+Performs a paired t-test to compare two related samples (e.g., before and after a UX change).
+Provides a visualization of the paired differences.
 }
 \examples{
 test_data <- data.frame(Before = c(55, 60, 65, 70, 75),

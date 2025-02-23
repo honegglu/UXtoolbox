@@ -14,10 +14,11 @@ hicks_law(choices, a = 0.2, b = 0.1)
 \item{b}{The regression coefficient (default is 0.1).}
 }
 \value{
-A numeric vector of predicted decision times.
+A list containing computed decision times and a visualization.
 }
 \description{
 Computes decision time using Hick’s Law based on the number of choices.
+Provides a visualization of decision time growth as choices increase.
 }
 \examples{
 choices <- c(2, 4, 8, 16)
