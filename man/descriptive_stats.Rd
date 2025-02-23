@@ -2,18 +2,22 @@
 % Please edit documentation in R/descriptive_stats.R
 \name{descriptive_stats}
 \alias{descriptive_stats}
-\title{Get quick descriptive stats on your dataset}
+\title{Descriptive Statistics Summary}
 \usage{
 descriptive_stats(data, cols)
 }
 \arguments{
-\item{data}{A data frame}
+\item{data}{A data frame containing UX metrics.}
 
-\item{cols}{Vector of column names}
+\item{cols}{A vector of column names to summarize.}
 }
 \value{
-A summary table with mean, median, SD, and range
+A data frame with descriptive statistics.
 }
 \description{
-Get quick descriptive stats on your dataset
+Computes mean, median, standard deviation, min, and max for selected columns.
+}
+\examples{
+test_data <- data.frame(A = c(1, 2, 3, 4, 5), B = c(10, 20, 30, 40, 50))
+descriptive_stats(test_data, c("A", "B"))
 }
