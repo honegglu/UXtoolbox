@@ -10,7 +10,7 @@
 #' - Visualization tools for UX data
 #'
 #' ## Installation
-#' To install the package from GitHub:
+#' To install the package from GitHub: 
 #'
 #' ```r
 #' install.packages("devtools")  # Install devtools if not already installed
@@ -41,4 +41,6 @@
 #' help(package = "UXtoolbox")
 #' ```
 #'
-"_PACKAGE"
+#' @docType package
+#' @name UXtoolbox
+NULL
