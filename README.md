@@ -1,36 +1,57 @@
-# UXtoolbox
+Hier ist eine überarbeitete und übersetzte Version der README, angepasst an ein Python-Projekt, das die Funktionen der ursprünglichen R-UXtoolbox von Mohsen Rafiei in Python überträgt:
 
-UXtoolbox is an R package designed to provide a comprehensive set of tools for UX and Human Factors research. It includes statistical tests, predictive models, Bayesian analyses, and usability evaluation methods.
+---
 
-## Features
+# UXtoolbox (Python)
 
-- Descriptive & Inferential Statistics: T-tests, ANOVA, correlation analysis  
-- Bayesian Methods: Bayesian ANOVA, Bayesian linear regression, Bayesian survival analysis, and Bayesian mixed-effects models  
-- Predictive Models: Linear regression, logistic regression, survival analysis, and mixture models  
-- UX Laws: Implementations of Fitts' Law, Hick's Law, and Weber's Law  
-- Structural Equation Modeling (SEM): Analyze complex relationships between UX variables  
-- Content & Sentiment Analysis: Word frequency, sentiment scoring, and topic modeling  
-- Visualization Tools: Generate correlation plots, bar charts, and eye-tracking heatmaps  
+**UXtoolbox** ist eine Python-Portierung der originalen [UXtoolbox für R](https://github.com/mohsen-rafiei/UXtoolbox) von Mohsen Rafiei. Ziel ist es, ein umfassendes Toolset für User-Experience- (UX) und Human-Factors-Forschung in Python bereitzustellen. Dieses Paket richtet sich insbesondere an Forschende und Praktiker\:innen, die mit Python arbeiten und UX-relevante Daten analysieren möchten.
 
-## Installation
+---
 
-To install UXtoolbox from GitHub, use the following commands in R:
+## ✨ Funktionen
 
-```r
-install.packages("devtools")  # Install devtools if not already installed  
-devtools::install_github("mohsen-rafiei/UXtoolbox")  
-library(UXtoolbox)  
-```
+* **Deskriptive & Inferenzstatistiken**
+  T-Tests, ANOVA, Korrelationsanalysen
 
-## Development
+* **Bayessche Methoden**
+  Bayessche ANOVA, lineare Regression, Überlebenszeitanalyse und gemischte Modelle
 
-To contribute or report issues, visit the GitHub repository:  
+* **Prädiktive Modelle**
+  Lineare & logistische Regression, Überlebensmodelle, Mixture Models
 
-[GitHub Repository](https://github.com/mohsen-rafiei/UXtoolbox)  
+* **UX-Gesetze**
+  Implementierungen von Fitts’ Law, Hick’s Law und Weber’s Law
 
-If you encounter any issues, please submit a bug report through the Issues tab.  
+* **Strukturgleichungsmodelle (SEM)**
+  Analyse komplexer Beziehungen zwischen UX-Variablen
 
-## License
+* **Textanalyse & Sentimentanalyse**
+  Wortfrequenzen, Sentiment Scores, Topic Modeling
 
-This package is licensed under the MIT License.
+* **Visualisierungstools**
+  Korrelationsplots, Balkendiagramme, Heatmaps für Eye-Tracking-Daten
 
+
+---
+
+## 🚧 Entwicklung
+
+Dieses Projekt ist **Work-in-Progress**. Du kannst zur Weiterentwicklung beitragen oder Fehler melden im GitHub Repository:
+
+👉 [GitHub Repository (Python-Version)](https://github.com/honegglu/UXtoolbox)
+
+Wenn du Probleme entdeckst, nutze bitte das **Issues**-Tab auf GitHub.
+
+---
+
+## ⚖️ Lizenz
+
+Dieses Projekt steht unter der **MIT-Lizenz**, was bedeutet, dass du es frei verwenden, ändern und verbreiten darfst.
+
+---
+
+**Hinweis:** Dieses Paket ist eine Python-Portierung der originalen [R-basierten UXtoolbox von Mohsen Rafiei](https://github.com/mohsen-rafiei/UXtoolbox), mit der Absicht, die Tools auch der Python-Community zugänglich zu machen.
+
+---
+
+Wenn du möchtest, kann ich dir auch helfen, eine passende `setup.py`, `pyproject.toml` oder eine Beispielstruktur für das Python-Paket zu erstellen. Sag einfach Bescheid!
