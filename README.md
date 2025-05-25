@@ -47,7 +47,3 @@ Dieses Projekt steht unter der **MIT-Lizenz**, was bedeutet, dass du es frei ver
 ---
 
 **Hinweis:** Dieses Paket ist eine Python-Portierung der originalen [R-basierten UXtoolbox von Mohsen Rafiei](https://github.com/mohsen-rafiei/UXtoolbox), mit der Absicht, die Tools auch der Python-Community zugänglich zu machen.
-
----
-
-Wenn du möchtest, kann ich dir auch helfen, eine passende `setup.py`, `pyproject.toml` oder eine Beispielstruktur für das Python-Paket zu erstellen. Sag einfach Bescheid!
