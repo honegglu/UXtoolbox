@@ -1,7 +1,3 @@
-Hier ist eine überarbeitete und übersetzte Version der README, angepasst an ein Python-Projekt, das die Funktionen der ursprünglichen R-UXtoolbox von Mohsen Rafiei in Python überträgt:
-
----
-
 # UXtoolbox (Python)
 
 **UXtoolbox** ist eine Python-Portierung der originalen [UXtoolbox für R](https://github.com/mohsen-rafiei/UXtoolbox) von Mohsen Rafiei. Ziel ist es, ein umfassendes Toolset für User-Experience- (UX) und Human-Factors-Forschung in Python bereitzustellen. Dieses Paket richtet sich insbesondere an Forschende und Praktiker\:innen, die mit Python arbeiten und UX-relevante Daten analysieren möchten.
