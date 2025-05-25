@@ -5,3 +5,4 @@
 .DS_Store
 .quarto
 **/.ipynb_checkpoints/*
+/Python/.ipynb_checkpoints
